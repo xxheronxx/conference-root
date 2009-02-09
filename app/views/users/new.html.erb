@@ -1,0 +1,88 @@
+<%= render :partial => "sub_nav" %>
+<div id="content">
+<h1>Sign up for Youth Conference!</h1>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+<div class="span-6">
+<fieldset>
+	<legend>Name:</legend>
+  <p>
+    <%= f.label :fname, "First Name" %><br />
+    <%= f.text_field :fname %>
+  </p>
+  <p>
+    <%= f.label :mname, "Middle Name" %><br />
+    <%= f.text_field :mname %>
+  </p>
+  <p>
+    <%= f.label :lname, "Last Name" %><br />
+    <%= f.text_field :lname %>
+  </p>
+</fieldset>
+</div>
+<div class="span-6">
+<fieldset>
+	<legend>Contact Information</legend>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+</fieldset>
+</div>
+<fieldset>
+	<legend>Registration Information</legend>
+	<p>
+		<%= f.label :ward, "What ward are you in?" %><br />
+		<%= f.text_field :ward %>
+	</p>
+	<p>
+		<%= f.label :youth_adult, "Are you a youth or adult leader?" %><br />
+		<%= f.text_field :youth_adult %>
+	</p>
+  <p>
+    <%= f.label :class_or_quorum, "If youth, What Class or Quorum are you in?" %><br />
+	<%= f.label :class_or_quorum, "If adult, what is your calling?" %><br />
+    <%= f.text_field :class_or_quorum %>
+  </p>
+</fieldset>
+
+<fieldset class="clear">
+<legend>Group Preference</legend>
+  <p>Please give us the names of two people you would like to be in the same group with you.  We will try to make sure that you are in the same group as at least one of them.</p>
+  <p>
+    <%= f.label :choice1, "First Choice" %><br />
+    <%= f.text_field :choice1 %>
+  </p>
+  <p>
+    <%= f.label :choice2, "Second Choice" %><br />
+    <%= f.text_field :choice2 %>
+  </p>
+  <p>
+    <%= f.label :birthday %><br />
+    <%= f.date_select :birthday %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+</fieldset>
+<% end %>
+
+<%= link_to 'Back', users_path %>
+</div>

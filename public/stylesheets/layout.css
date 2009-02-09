@@ -1,0 +1,91 @@
+body {
+  background-color: #362f2d;
+  background-image: url(/images/mainbkground.png);
+  background-repeat: repeat-x;
+  font-family: Verdana;
+  padding-left: 25px;
+  padding-right: 25px; }
+
+a {
+  color: white;
+  font-family: Verdana, Sans; }
+
+#site_header {
+  height: 300px;
+  background-image: url(/images/header.png);
+  background-repeat: no-repeat;
+  margin: 0; }
+  #site_header a#home_link {
+    display: block;
+    width: 350px;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: 309px;
+    margin-right: 293px; }
+  #site_header p {
+    color: #cfd1c5;
+    font-size: 18px;
+    font-family: Verdana, Sans;
+    padding: 0;
+    margin: 0;
+    padding-top: 60px; }
+  #site_header #main_nav {
+    height: 61px;
+    width: 358px;
+    background-image: url(/images/main_nav.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    margin-top: 39px;
+    margin-left: 298px;
+    margin-right: 291px; }
+    #site_header #main_nav a {
+      font-family: Verdana, Sans;
+      color: #cfd1c5; }
+    #site_header #main_nav a.menuitem {
+      display: block;
+      position: absolute;
+      height: 61px;
+      cursor: pointer;
+      background-position: top left;
+      background-repeat: no-repeat; }
+    #site_header #main_nav a#register, #site_header #main_nav a#register_on {
+      width: 82px;
+      z-index: 10; }
+    #site_header #main_nav a#wear, #site_header #main_nav a#wear_on {
+      width: 183px;
+      z-index: 9; }
+    #site_header #main_nav a#bring, #site_header #main_nav a#bring_on {
+      width: 283px;
+      z-index: 8; }
+    #site_header #main_nav a#schedule, #site_header #main_nav a#schedule_on {
+      width: 360px;
+      z-index: 7; }
+    #site_header #main_nav a#register, #site_header #main_nav a#wear, #site_header #main_nav a#bring, #site_header #main_nav a#schedule {
+      background-image: url(/images/main_nav.png);
+      background-position: top left;
+      background-repeat: no-repeat; }
+    #site_header #main_nav a#register_on, #site_header #main_nav a#register:hover, #site_header #main_nav a#wear_on, #site_header #main_nav a#wear:hover, #site_header #main_nav a#bring_on, #site_header #main_nav a#bring:hover, #site_header #main_nav a#schedule_on, #site_header #main_nav a#schedule:hover {
+      background-image: url(/images/main_nav_on.png);
+      background-position: top left; }
+
+#page_intro {
+  height: 190px;
+  background-color: #699B6F;
+  margin-bottom: 10px; }
+
+#wrapper {
+  background-image: url(/images/content_bkground.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-color: #D3D2B6; }
+  #wrapper #sub_nav {
+    margin: 0;
+    padding-top: 20px; }
+    #wrapper #sub_nav a {
+      padding: 20px;
+      text-decoration: none; }
+    #wrapper #sub_nav hr {
+      margin-left: 20px;
+      margin-right: 20px; }
+  #wrapper #content {
+    padding: 50px; }

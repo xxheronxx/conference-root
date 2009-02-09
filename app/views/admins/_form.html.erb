@@ -1,0 +1,14 @@
+<% form_for @admin do |f| %>
+ 
+  <label for="admin_name">Name:</label><br />
+  <%= f.text_field :name %><br />
+ 
+  <label for="admin_password">Password:</label><br />
+  <%= f.password_field :password %><br />
+ 
+  <label for="admin_password_confirmation">Password Confirmation:</label><br />
+  <%= f.password_field :password_confirmation %><br />
+ 
+  <%= submit_tag "Submit" %>
+ 
+<% end %>

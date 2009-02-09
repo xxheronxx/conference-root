@@ -1,0 +1,7 @@
+<div id="content">
+Name: <%= @admin.name %><br />
+Created: <%= @admin.created_at.strftime("%B %d, %Y at %l:%M %p") %><br />
+Updated: <%= @admin.updated_at.strftime("%B %d, %Y at %l:%M %p") %><br />
+<br />
+Currently logged in on <%= @admin.sessions.size %> computer(s).
+</div>

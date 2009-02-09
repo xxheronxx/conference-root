@@ -1,0 +1,56 @@
+
+--- 
+users: 
+  columns: 
+  - id
+  - fname
+  - mname
+  - lname
+  - class_or_quorum
+  - phone
+  - address
+  - city
+  - zip
+  - email
+  - choice1
+  - choice2
+  - birthday
+  - created_at
+  - updated_at
+  - ward
+  - youth_adult
+  records: 
+  - - "1"
+    - Nathan
+    - Ryan
+    - Garza
+    - Elder's :D
+    - 832-514-5726
+    - 12226 Lavon Dr.
+    - Tomball
+    - "77375"
+    - nathan.garza@gmail.com
+    - Charity Rachelle Coffin Garza
+    - William & Kathryn Garza
+    - "2004-12-02"
+    - 2009-02-07 15:10:44
+    - 2009-02-07 15:10:44
+    - 
+    - 
+  - - "2"
+    - Charity
+    - Rachelle
+    - Garza
+    - YW 1st Counselor
+    - 281-514-5726
+    - 12226 Lavon Dr
+    - Tomball
+    - TX
+    - charitygarza@yahoo.com
+    - Nathan Garza
+    - Nichole Skidmore
+    - "2004-08-08"
+    - 2009-02-08 23:57:54
+    - 2009-02-08 23:57:54
+    - Parkway
+    - Adult

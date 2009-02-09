@@ -1,0 +1,14 @@
+<div id="content">
+<%= error_messages_for :admin %>
+ 
+<fieldset>
+  <legend>Edit Account</legend>
+ 
+  <%= render :partial => 'form' %>
+ 
+</fieldset>
+ 
+<br />
+ 
+<%= button_to "Unregister", @admin, :method => :delete, :confirm => "Are you sure?" %>
+</div>

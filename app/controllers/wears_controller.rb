@@ -1,0 +1,2 @@
+class WearsController < ApplicationController
+end

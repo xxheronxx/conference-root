@@ -1,0 +1,10 @@
+--- 
+user: mongrel_yc2008
+group: app_yc2008
+cwd: /opt/apps/yc2008/current
+log_file: /opt/apps/yc2008/shared/log/mongrel.log
+port: "8000"
+environment: production
+address: 127.0.0.1
+pid_file: /opt/apps/yc2008/shared/pids/mongrel.pid
+servers: 2
