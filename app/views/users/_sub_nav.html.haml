@@ -1,13 +1,9 @@
-#sub_nav.last
-  %a{:href => "/bring/indevidual"} Indevidual Packing List
-  |
-  %a{:href => "/bring/ward"} Ward Packing List
+- if @admin
+  #sub_nav.last
+    = link_to "Attendee List", users_url
 
-      
-  - if @admin
-    = link_to "Edit Account", edit_admin_path('account')
+    = link_to "Download Registrant List", "/download_list"
+
+    = link_to "Edit Your Admin Account", edit_admin_path('account')
 
     = link_to "Logout", @application_session, :method => :delete
-  - else
-    = link_to "Login", new_session_path 
-    = link_to "Register", new_admin_path

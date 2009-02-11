@@ -15,6 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :admins
   map.bring_ward 'bring/ward', :controller => 'brings', :action => 'ward'
   map.bring_indevidual 'bring/indevidual', :controller => 'brings', :action => 'index'
+  map.download_list 'download_list', :controller => 'users', :action => 'download'
   # map.connect ':controller/:action'
   # map.connect ':controller/:action/:id'
   # map.connect ':controller/:action/:id.:format'
