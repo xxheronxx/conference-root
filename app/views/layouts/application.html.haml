@@ -1,33 +1,36 @@
 !!!
-
+ 
 %html
   %head
     %title Building on the Rock of Christ :: Klein Stake Youth Conference 2009
     = stylesheet_link_tag 'screen', 'layout'
   %body
-    #site_header.span-24.clearfix
-      %a#home_link{:href => root_url}
-
-      #main_nav.span-24.last
-        = link_to "", new_user_path, {:id => "register", :class => "menuitem"}
+    #page
+      #site_header.span-24.clearfix
+        %a#home_link{:href => root_url}
+ 
+        #main_nav.span-24.last
+          = link_to "", new_user_path, {:id => "register", :class => "menuitem"}
+          
+          = link_to "", wears_url, {:id => "wear", :class => "menuitem"}
         
-        = link_to "", wears_url, {:id => "wear", :class => "menuitem"}
-        
-        = link_to "", brings_url, {:id => "bring", :class => "menuitem"}
-        
-        = link_to "", schedules_url, {:id => "schedule", :class => "menuitem"}
+          = link_to "", brings_url, {:id => "bring", :class => "menuitem"}
+          
+          = link_to "", schedules_url, {:id => "schedule", :class => "menuitem"}
     
-    #wrapper.span-24.clearfix
-
+      #wrapper.span-24.clearfix
+ 
       
-      = "- Message: #{flash[:notice]}" if flash[:notice]
-      = yield
-
+        = "<div class='notice'>- Message: #{flash[:notice]}</div>" if flash[:notice]
+        = "<div class='error'>- Error: #{flash[:error]}</div>" if flash[:error]
+        = yield
+ 
       
-      - if @admin
-        = link_to "Edit Account", edit_admin_path('account')
-
-        = link_to "Logout", @application_session, :method => :delete
-      - else
-        = link_to "Login", new_session_path 
-        = link_to "Register", new_admin_path
+        - if @admin
+          = link_to "Edit Account", edit_admin_path('account')
+ 
+          = link_to "Logout", @application_session, :method => :delete
+        
+          = link_to "Register a new Admin", new_admin_path
+        - else
+          = link_to "Login", new_session_path

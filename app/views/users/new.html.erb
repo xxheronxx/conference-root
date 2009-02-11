@@ -4,9 +4,9 @@
 
 <% form_for(@user) do |f| %>
   <%= f.error_messages %>
-<div class="span-6">
+<div class="span-7">
 <fieldset>
-	<legend>Name:</legend>
+	<legend>Personal Information:</legend>
   <p>
     <%= f.label :fname, "First Name" %><br />
     <%= f.text_field :fname %>
@@ -21,7 +21,7 @@
   </p>
 </fieldset>
 </div>
-<div class="span-6">
+<div class="span-7">
 <fieldset>
 	<legend>Contact Information</legend>
   <p>
@@ -50,29 +50,37 @@
 	<legend>Registration Information</legend>
 	<p>
 		<%= f.label :ward, "What ward are you in?" %><br />
-		<%= f.text_field :ward %>
+		<%= f.select :ward, list_of_wards, {:include_blank => true}  %>
 	</p>
 	<p>
 		<%= f.label :youth_adult, "Are you a youth or adult leader?" %><br />
-		<%= f.text_field :youth_adult %>
+		<%= f.select :youth_adult, y_or_a %>
+	</p>
+	<p>
+	  <%= f.label :birthday %><br />
+	  <p>You must be 14 before April 11, 2009 in order to attend this years youth conference.</p>
+	  <%= f.date_select :birthday, :start_year => 1900, :end_year => 1995, :default => 14.years.ago %>
 	</p>
 </fieldset>
 
 <fieldset class="clear">
 <legend>Group Preference</legend>
-  <p>Please give us the names of two people you would like to be in the same group with you.  We will try to make sure that you are in the same group as at least one of them.</p>
   <p>
-    <%= f.label :choice1, "First Choice" %><br />
+	Please give us the names of two people you would like to be in the same
+	group with you.  We will try to make sure that you are in the same group as
+	at least one of them.
+  </p>
+<div class="span-8 prepend-3">  
+  <p>
+	<%= f.label :choice1, "First Choice" %><br />
     <%= f.text_field :choice1 %>
   </p>
+</div class="span-8 append-3">
   <p>
     <%= f.label :choice2, "Second Choice" %><br />
     <%= f.text_field :choice2 %>
   </p>
-  <p>
-    <%= f.label :birthday %><br />
-    <%= f.date_select :birthday %>
-  </p>
+</div>
   <p>
     <%= f.submit "Create" %>
   </p>

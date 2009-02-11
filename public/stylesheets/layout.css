@@ -7,8 +7,12 @@ body {
   padding-right: 25px; }
 
 a {
-  color: white;
+  color: #6F000E;
   font-family: Verdana, Sans; }
+
+#page {
+  width: 955px;
+  margin: 0 auto; }
 
 #site_header {
   height: 300px;

@@ -11,4 +11,5 @@ class User < ActiveRecord::Base
     name += lname
     name
   end
+  
 end
