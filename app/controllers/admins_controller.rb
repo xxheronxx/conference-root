@@ -1,6 +1,5 @@
 class AdminsController < ApplicationController
-  before_filter :ensure_login, :only => [:edit, :update, :destroy]
-  before_filter :ensure_logout, :only => [:new, :create]
+  before_filter :ensure_login
  
   def index
     @admins = Admin.find(:all)
