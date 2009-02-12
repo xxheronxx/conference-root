@@ -24,3 +24,7 @@ hr {margin:-8px auto 11px;}
 .clearfix, .container {display:inline-block;}
 * html .clearfix, * html .container {height:1%;}
 fieldset {padding-top:0;}
+
+/** customizationa for yc 2009 **/
+#page.container {margin-top: -19px;}
+a.menuitem {margin-left: -180px;}

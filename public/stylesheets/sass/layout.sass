@@ -3,9 +3,6 @@ body
   :background-image url(/images/mainbkground.png)
   :background-repeat repeat-x
   :font-family Verdana
-  :padding-left 25px
-  :padding-right 25px
- 
 a
   :color #6F000E  
   :font-family Verdana, Sans
@@ -35,6 +32,7 @@ a
     :height 61px
     :width 358px
     :background-image url(/images/main_nav.png)
+    /:border 1px solid green
     :background-repeat no-repeat
     :background-position top left
     :margin-top 39px
@@ -50,6 +48,7 @@ a
       :cursor pointer
       :background-position top left
       :background-repeat no-repeat
+      /:border 1px solid pink
     a#register, a#register_on
       :width 82px
       :z-index 10
@@ -64,11 +63,8 @@ a
       :z-index 7
     a#register, a#wear, a#bring, a#schedule
       :background-image url(/images/main_nav.png)
-      :background-position top left
-      :background-repeat no-repeat
     a#register_on, a#register:hover, a#wear_on, a#wear:hover, a#bring_on, a#bring:hover, a#schedule_on, a#schedule:hover
       :background-image url(/images/main_nav_on.png)
-      :background-position top left
 #page_intro
   :height 190px
   :background-color #699B6F

@@ -4,12 +4,14 @@
   %head
     %title Building on the Rock of Christ :: Klein Stake Youth Conference 2009
     = stylesheet_link_tag 'screen', 'layout'
+    / [if IE]><link rel="stylesheet" href="/stylesheets/ie.css" type="text/css" media="screen, projection"><![endif]
+	
   %body
-    #page
+    #page.container
       #site_header.span-24.clearfix
         %a#home_link{:href => root_url}
  
-        #main_nav.span-24.last
+        #main_nav
           = link_to "", new_user_path, {:id => "register", :class => "menuitem"}
           
           = link_to "", wears_url, {:id => "wear", :class => "menuitem"}

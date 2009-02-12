@@ -2,9 +2,7 @@ body {
   background-color: #362f2d;
   background-image: url(/images/mainbkground.png);
   background-repeat: repeat-x;
-  font-family: Verdana;
-  padding-left: 25px;
-  padding-right: 25px; }
+  font-family: Verdana; }
 
 a {
   color: #6F000E;
@@ -65,12 +63,9 @@ a {
       width: 360px;
       z-index: 7; }
     #site_header #main_nav a#register, #site_header #main_nav a#wear, #site_header #main_nav a#bring, #site_header #main_nav a#schedule {
-      background-image: url(/images/main_nav.png);
-      background-position: top left;
-      background-repeat: no-repeat; }
+      background-image: url(/images/main_nav.png); }
     #site_header #main_nav a#register_on, #site_header #main_nav a#register:hover, #site_header #main_nav a#wear_on, #site_header #main_nav a#wear:hover, #site_header #main_nav a#bring_on, #site_header #main_nav a#bring:hover, #site_header #main_nav a#schedule_on, #site_header #main_nav a#schedule:hover {
-      background-image: url(/images/main_nav_on.png);
-      background-position: top left; }
+      background-image: url(/images/main_nav_on.png); }
 
 #page_intro {
   height: 190px;
