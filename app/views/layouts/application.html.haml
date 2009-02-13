@@ -3,17 +3,21 @@
 %html
   %head
     %title Building on the Rock of Christ :: Klein Stake Youth Conference 2009
-    = stylesheet_link_tag 'screen', 'layout'
-    / [if IE]><link rel="stylesheet" href="/stylesheets/ie.css" type="text/css" media="screen, projection"><![endif]
+    = stylesheet_link_tag 'print', 'screen', 'layout'
+    / [if IE]><link rel="stylesheet" href="/stylesheets/ie.css" type="text/css" media="screen, projection">
 	
   %body
     #page.container
       #site_header.span-24.clearfix
+        %h1 Building on the Rock of Christ
+        %h2 Klein Stake Youth Conference 2009
         %a#home_link{:href => root_url}
  
         #main_nav
           = link_to "", new_user_path, {:id => "register", :class => "menuitem"}
-          
+
+          = link_to "", schedules_url, {:id => "spiritual", :class => "menuitem"}          
+
           = link_to "", wears_url, {:id => "wear", :class => "menuitem"}
         
           = link_to "", brings_url, {:id => "bring", :class => "menuitem"}
@@ -22,7 +26,6 @@
     
       #wrapper.span-24.clearfix
  
-      
         = "<div class='notice'>- Message: #{flash[:notice]}</div>" if flash[:notice]
         = "<div class='error'>- Error: #{flash[:error]}</div>" if flash[:error]
         = yield

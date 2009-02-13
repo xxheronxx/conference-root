@@ -1,0 +1,2 @@
+module SpiritualPreparationHelper
+end
