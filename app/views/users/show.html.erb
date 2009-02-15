@@ -29,6 +29,14 @@
   <b>Birthday:</b>
   <%=h @user.birthday %>
 </p>
+<p>
+	<b>Want's a Shirt?</b>
+	<%=h @user.tshirt_agreement %>
+</p>
+<p>
+	<b>If so, what size?</b>
+	<%=h @user.tshirt_size %>
+</p>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

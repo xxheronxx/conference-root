@@ -92,10 +92,28 @@
 	    <%= f.text_field :choice3 %>
 	  </p>
 	</div>
-	  <p class="clear">
-	    <%= f.submit "Create" %>
-	  </p>
+
 </fieldset>
+<fieldset>
+	
+<legend>Optional Youth Conference T-shirt</legend>
+
+<p>The cost of the T-shirts is $7.00.  Money for T-shirts need to be received by your ward no later than March 15th.</p>
+<p>To pay for your T-Shirt complete a Ward Donation slip and write in the category marked OTHER the following, "2009 YC T-shirt". </p>
+<p>Enclose a check or cash in the donation envelop and give to a member of your Bishopric.</p>
+<p>T-shirts will be distributed at the conclusion of Youth Conference.</p>
+<p> 
+<%= f.label :tshirt_agreement, "I would like a Youth Conference T-shirt. I will pay $7.00 to my Ward by March 15, 2009" %>
+<%= f.select :tshirt_agreement, tshirt_options, {:include_blank => true}  %> 
+</p>
+<p>
+<%= f.label :tshirt_size, "T-shirt size" %>
+<%= f.select :tshirt_size, size_options, {:include_blank => true}  %>
+</p>
+</fieldset>
+<p class="clear">
+  <%= f.submit "Create" %>
+</p>
 <% end %>
 
 <%= link_to 'Back', users_path %>
