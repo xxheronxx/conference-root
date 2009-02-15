@@ -1,55 +1,29 @@
 <div id="content">
-<p>
-  <b>Name:</b>
-  <%=h @user.full_name %>
-</p>
-<p>
-	<b>Ward</b>
-	<%=h @user.ward %>
-</p>
-<p>
-	<b>Youth or Adult?</b>
-	<%=h @user.youth_adult %>
-</p>
-<p>
-  <b>Class or quorum:</b>
-  <%=h @user.class_or_quorum %>
-</p>
+	<h1>Details for <%=h @user.full_name %></h2>
+	<h3><%=h @user.y_a_phrase %> from the <%=h @user.ward %></h3>
 
-<p>
-  <b>Phone:</b>
-  <%=h @user.phone %>
-</p>
+	<h2>Contact Information</h2>
+	<p>
+	  <b>Phone:</b>
+	  <%=h @user.phone %>
+	</p>
 
-<p>
-  <b>Address:</b>
-  <%=h @user.address %>
-</p>
+	<p>
+	  <b>Address:</b><br />
+	  <%=h @user.address %><br />
+	  <%=h @user.city %>, TX <%=h @user.zip %>
+	</p>
 
-<p>
-  <b>City:</b>
-  <%=h @user.city %>
-</p>
-
-<p>
-  <b>Zip:</b>
-  <%=h @user.zip %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%=h @user.email %>
-</p>
-
-<p>
-  <b>Choice1:</b>
-  <%=h @user.choice1 %>
-</p>
-
-<p>
-  <b>Choice2:</b>
-  <%=h @user.choice2 %>
-</p>
+	<p>
+		<b>Email:</b>
+		<a href="mailto:<%=h @user.email %>"><%=h @user.email %></a>
+	</p>
+	<h2>Group Preferences:</h2>
+	<ol>
+		<li><%=h @user.choice1 %></li>
+		<li><%=h @user.choice2 %></li>
+		<li><%=h @user.choice3 %></li>
+	</ol>
 
 <p>
   <b>Birthday:</b>

@@ -54,7 +54,11 @@
 	</p>
 	<p>
 		<%= f.label :youth_adult, "Are you a youth or adult leader?" %><br />
-		<%= f.select :youth_adult, y_or_a %>
+		<%= f.select :youth_adult, y_or_a, {:include_blank => true} %>
+	</p>
+	<p>
+		<%= f.label :adult_type, "If Adult Leader, what type?" %><br />
+		<%= f.select :adult_type, adult_type_list, {:include_blank => true} %>
 	</p>
 	<p>
 	  <%= f.label :birthday %><br />
@@ -64,26 +68,33 @@
 </fieldset>
 
 <fieldset class="clear">
-<legend>Group Preference</legend>
-  <p>
-	Please give us the names of two people you would like to be in the same
-	group with you.  We will try to make sure that you are in the same group as
-	at least one of them.
-  </p>
-<div class="span-8 prepend-3">  
-  <p>
-	<%= f.label :choice1, "First Choice" %><br />
-    <%= f.text_field :choice1 %>
-  </p>
-</div class="span-8 append-3">
-  <p>
-    <%= f.label :choice2, "Second Choice" %><br />
-    <%= f.text_field :choice2 %>
-  </p>
-</div>
-  <p>
-    <%= f.submit "Create" %>
-  </p>
+	<legend>Group Preference</legend>
+	  <p>
+		Please give us the names of three people you would like to be in the same
+		group with you.  We will try to make sure that you are in the same group as
+		at least one of them.
+	  </p>
+	<div class="span-7">  
+	  <p>
+		<%= f.label :choice1, "First Choice" %><br />
+	    <%= f.text_field :choice1 %>
+	  </p>
+	</div>
+	<div class="span-7">
+	  <p>
+	    <%= f.label :choice2, "Second Choice" %><br />
+	    <%= f.text_field :choice2 %>
+	  </p>
+	</div>
+	<div class="last">
+	  <p>
+	    <%= f.label :choice3, "Third Choice" %><br />
+	    <%= f.text_field :choice3 %>
+	  </p>
+	</div>
+	  <p class="clear">
+	    <%= f.submit "Create" %>
+	  </p>
 </fieldset>
 <% end %>
 
