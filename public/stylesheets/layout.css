@@ -91,3 +91,7 @@ a {
       margin-right: 20px; }
   #wrapper #content {
     padding: 50px; }
+
+table#spiritual_prep tr td {
+  vertical-align: top;
+  border-bottom: 1px solid #222; }
