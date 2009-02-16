@@ -26,7 +26,11 @@ class User < ActiveRecord::Base
   end
   def y_a_short
     if youth_adult = "adult"
-      type = adult_type
+      if !adult_type.nil?
+        type = adult_type
+      else
+        type = youth_adult
+      end
     else
       type = youth_adult
     end
@@ -34,7 +38,11 @@ class User < ActiveRecord::Base
   end
   def y_a_phrase
     if youth_adult = "adult"
-      phrase = "an #{adult_type}"
+      if !adult_type.nil?
+        phrase = "an #{adult_type}"
+      else
+        phrase = "an #{youth_adult}"
+      end
     else
       phrase = "a #{youth_adult}"
     end
