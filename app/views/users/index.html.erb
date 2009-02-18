@@ -13,14 +13,13 @@
 
 <% for user in @users %>
   <tr>
-    <td><%=h user.short_name %></td>
+    <td><%= link_to user.short_name, user %></td>
     <td><%=h user.ward %></td>
     <td><%=h user.y_a_short %></td>
     <td><%=h user.phone %></td>
     <td><%=h user.email %></td>
     <td><%=h user.birthday %></td>
     <td>
-        <%= link_to 'Show', user %>
     	<%= link_to 'Edit', edit_user_path(user) %>
     	<%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %>
     </td>

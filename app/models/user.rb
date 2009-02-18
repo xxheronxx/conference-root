@@ -25,8 +25,8 @@ class User < ActiveRecord::Base
     name
   end
   def y_a_short
-    if youth_adult = "adult"
-      if !adult_type.nil?
+    if youth_adult == "Adult"
+      unless adult_type.nil?
         type = adult_type
       else
         type = youth_adult
@@ -37,9 +37,9 @@ class User < ActiveRecord::Base
     type
   end
   def y_a_phrase
-    if youth_adult = "adult"
-      if !adult_type.nil?
-        phrase = "an #{adult_type}"
+    if youth_adult == "Adult"
+      unless adult_type.nil?
+        phrase = "a #{adult_type}"
       else
         phrase = "an #{youth_adult}"
       end
