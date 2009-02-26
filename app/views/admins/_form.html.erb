@@ -8,7 +8,19 @@
  
   <label for="admin_password_confirmation">Password Confirmation:</label><br />
   <%= f.password_field :password_confirmation %><br />
+
+  <%= f.label :full_name, "Full Name" %><br />
+  <%= f.text_field :full_name %><br />
+
+  <%= f.label :ward, "Ward" %><br />
+  <%= f.select :ward, list_of_wards, {:include_blank => true}  %><br />
+
+  <%= f.label :calling, "Calling" %><br />
+  <%= f.text_field :calling %><br />
  
+  <%= f.label :level, "Admin Level" %><br />
+  <%= f.select :level, list_of_levels, {:include_blank => true}  %><br />
+
   <%= submit_tag "Submit" %>
  
 <% end %>

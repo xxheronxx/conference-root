@@ -70,14 +70,18 @@
 <fieldset class="clear">
 	<legend>Group Preference</legend>
 	  <p>
-		Please give us the names of three people you would like to be in the same
-		group with you.  We will try to make sure that you are in the same group as
-		at least one of them.
+		Please give us the <em>Full Name</em> and <em>Ward</em> of three people
+		you would like to be in the same group with you.  We will try to make
+		sure that you are in the same group as at least one of them.
 	  </p>
 	<div class="span-7">  
 	  <p>
 		<%= f.label :choice1, "First Choice" %><br />
 	    <%= f.text_field :choice1 %>
+	  </p>
+	  <p>
+	  	<%= f.label :choice1_ward, "Ward" %><br />
+	    <%= f.select :choice1_ward, list_of_wards, {:include_blank => true}  %>
 	  </p>
 	</div>
 	<div class="span-7">
@@ -85,11 +89,19 @@
 	    <%= f.label :choice2, "Second Choice" %><br />
 	    <%= f.text_field :choice2 %>
 	  </p>
+	  <p>
+	  	<%= f.label :choice2_ward, "Ward" %><br />
+	    <%= f.select :choice2_ward, list_of_wards, {:include_blank => true}  %>
+	  </p>
 	</div>
 	<div class="last">
 	  <p>
 	    <%= f.label :choice3, "Third Choice" %><br />
 	    <%= f.text_field :choice3 %>
+	  </p>
+	  <p>
+	  	<%= f.label :choice3_ward, "Ward" %><br />
+	    <%= f.select :choice3_ward, list_of_wards, {:include_blank => true}  %>
 	  </p>
 	</div>
 

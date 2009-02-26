@@ -26,11 +26,11 @@ class AdminsController < ApplicationController
   end
  
   def edit
-    @admin = Admin.find(@user)
+    @admin = Admin.find(@admin)
   end
  
   def update
-    @admin = Admin.find(@user)
+    @admin = Admin.find(@admin)
     if @admin.update_attributes(params[:admin])
       flash[:notice] = "Your account has been updated"
       redirect_to(root_url)
@@ -40,7 +40,7 @@ class AdminsController < ApplicationController
   end
  
   def destroy
-    Admin.destroy(@user)
+    Admin.destroy(@admin)
     session[:id] = @user = nil
     flash[:notice] = "You are now unregistered"
     redirect_to(root_url)

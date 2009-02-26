@@ -4,6 +4,6 @@
 
     = link_to "Download Registrant List", "/download_list"
 
-    = link_to "Edit Your Admin Account", edit_admin_path('account')
+    = link_to "Edit Your Admin Account", edit_admin_path(@admin)
 
     = link_to "Logout", @application_session, :method => :delete

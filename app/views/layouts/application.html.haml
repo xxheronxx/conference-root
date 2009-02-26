@@ -32,10 +32,10 @@
  
       
         - if @admin
-          = link_to "Edit Account", edit_admin_path('account')
- 
+          = #link_to "Edit Account", edit_admin_path(@admin)
+          = #h @admin.ward
           = link_to "Logout", @application_session, :method => :delete
         
-          = link_to "Register a new Admin", new_admin_path
+          = (link_to "Register a new Admin", new_admin_path) unless @admin.level != "Admin"
         - else
           = link_to "Login", new_session_path

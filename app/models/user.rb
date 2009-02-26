@@ -48,4 +48,5 @@ class User < ActiveRecord::Base
     end
     phrase
   end
+  
 end

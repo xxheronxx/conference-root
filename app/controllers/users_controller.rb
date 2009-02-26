@@ -3,7 +3,16 @@ class UsersController < ApplicationController
   # GET /users.xml
   before_filter :ensure_login, :except => [:new, :create, :home]
   def index
-    @users = User.find(:all)
+    if !@admin.nil?
+      if @admin.level == "Ward Leader"
+        @users = User.find_all_by_ward(@admin.ward)
+      else
+        @users = User.find(:all)
+      end
+    else
+      flash[:error] = 'You must be logged in to view the registrant list'
+      format.html { redirect_to(root_url) }
+    end
 
     respond_to do |format|
       format.html # index.html.erb
