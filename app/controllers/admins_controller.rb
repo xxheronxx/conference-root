@@ -26,11 +26,11 @@ class AdminsController < ApplicationController
   end
  
   def edit
-    @admin = Admin.find(@admin)
+    @admin = Admin.find(params[:id])
   end
  
   def update
-    @admin = Admin.find(@admin)
+    @admin = Admin.find(params[:id])
     if @admin.update_attributes(params[:admin])
       flash[:notice] = "Your account has been updated"
       redirect_to(root_url)
