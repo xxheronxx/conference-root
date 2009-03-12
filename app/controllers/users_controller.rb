@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
-  before_filter :ensure_login, :except => [:new, :create, :home]
+  before_filter :ensure_login, :except => [:new, :home]
   def index
     if !@admin.nil?
       if @admin.level == "Ward Leader"
@@ -34,12 +34,18 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.xml
   def new
-    @user = User.new
+    if !@admin.nil?
+      @user = User.new 
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @user }
+      respond_to do |format|
+        format.html # new.html.erb
+        format.xml  { render :xml => @user }
+      end
+    else
+      flash[:notice] = "<h2 class=\"error\">Registration has closed</h2><p>Unfortunatly, registration for Klein Stake's 2009 Youth Conference is now closed.  If you have any questions or concerns, please contact a member of your ward Young Men's or Young Women's Presidency.  Thank you!</p>"
+      redirect_to(root_url)
     end
+   
   end
 
   # GET /users/1/edit
